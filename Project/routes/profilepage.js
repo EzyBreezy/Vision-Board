@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// profilepage
+// profilepage.js
 
 // main page route
 router.get('/', (req, res) => {
