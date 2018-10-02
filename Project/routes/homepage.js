@@ -5,8 +5,8 @@ const router = express.Router();
 
 // path is home/login
 router.get('/', (req, res) => {
-    // 
-   res.render(`main/homepage`)
+    // home page
+    res.render(`main/homepage`) // path to hbs
 })
 
 module.exports = router;

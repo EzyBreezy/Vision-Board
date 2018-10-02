@@ -1,18 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-// login
+// login.js
 
-router.get('/login', (req, res) => {
+// path is login page
+router.get('/', (req, res) => {
     // login page
     res.render(`main/login`)
 })
-
-router.get('/logout', (req, res) => {
-    // logout page
-    res.get(`main/logout`)
-})
-
-
 
 module.exports = router;

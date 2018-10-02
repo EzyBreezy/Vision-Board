@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-// profilepage
+// signup.js
 
-// main page route
+// path is signup page
 router.get('/', (req, res) => {
-    // profile page
-    res.render(`profile/profilepage`)
+    // signup page
+    res.render(`main/signup`) // path to hbs
 })
+
+
 
 module.exports = router;
