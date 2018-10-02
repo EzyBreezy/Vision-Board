@@ -7,11 +7,11 @@ const app = express()
 // port to listen on
 const port = 4000
 
-//views engine
+//setup views engine
 app.set(`view engine`, `hbs`)
 
 // route to use
 app.use(require(`./routes/index`))
 
 // listen to the server on port
-app.listen(port, () => console.error(`port started on ${port}`))
+app.listen(port, () => console.log(`port started on ${port}`))
