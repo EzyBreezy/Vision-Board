@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-   router.post("hello")
+   res.render(`main/homepage`)
+   console.log("this just happened")
 })
 
 module.exports = router;
