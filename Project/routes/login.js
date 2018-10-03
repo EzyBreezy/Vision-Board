@@ -9,6 +9,10 @@ router.get('/', (req, res) => { // express.Router.get('browser path, (Server Req
     res.render(`main/login`)
 })
 
+router.put('/:id', (req, res) => {
+    // Render form to sign in with user
+    res.render(`main/login`)
+})
 
 
 

@@ -9,7 +9,15 @@ router.get('/', (req, res) => { // express.Router.get('browser path, (Server Req
     res.render(`profile/profilepage`)
 })
 
+router.post('/', (req, res) => {
+    // post a image url
 
+})
+
+router.get('/:id', (req, res) => {
+    // show
+    res.render(`main/homepage`)
+})
 
 
 
