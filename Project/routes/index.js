@@ -18,6 +18,13 @@ router.use('/signup', require('./signup'))
 
 
 
+// 404 route any route that isnt defined will be a 404 page last thing to work on.
+router.get('*', (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
+    // home page
+    res.send(`404 Page`) // path to hbs
+})
+
+
 module.exports = router;
 // module.exports = router is allowing everything that 
 // is router to be exported to be used in other file's 
