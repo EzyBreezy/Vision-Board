@@ -7,6 +7,8 @@ const app = express()
 // port to listen on
 const port = 4000
 
+
+
 //setup views engine
 app.set(`view engine`, `hbs`)
 // css styleshit linking __dirname is the current directory public is the folder
