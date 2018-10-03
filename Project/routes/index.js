@@ -16,6 +16,8 @@ router.use('/login', require('./login'))
 // signup.js routes /signup < is the signup page when user needs to signup
 router.use('/signup', require('./signup'))
 
+router.use('/goals', require('./goals'))
+
 
 
 // 404 route any route that isnt defined will be a 404 page last thing to work on.

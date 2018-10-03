@@ -1,19 +1,15 @@
 const express = require('express'); // requires the express module
 const router = express.Router(); // initializes the express with Router method
+const Goals = require('../models/Goals')
+//homepage.js
 
-// login.js
-
-// path is login page
-router.get('/', (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
-    // login page
-    res.render(`main/login`)
+// path is home/login
+router.post('/new', (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
+    // home page
+    Goals.create({
+        
+    })
 })
-
-// router.put('/:id', (req, res) => {
-//     // Render form to sign in with user
-//     res.render(`main/login`)
-// })
-
 
 
 
