@@ -5,7 +5,7 @@ var GoalSchema = new Schema({
     Title: String,
     Comment: String,
     Images: String, // update this when you figure out.
-    Cost: Number
+    Cost: String
     // Percent_To_Goal: Number, update this when you figure it out.
     // Graphical_Overlay: Number, 
 })

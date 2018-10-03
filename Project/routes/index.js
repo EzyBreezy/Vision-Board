@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express'); // requires the express module
+const router = express.Router(); // initializes the express with Router method
 
 // index links all routes dictates path
 
@@ -17,4 +17,8 @@ router.use('/login', require('./login'))
 router.use('/signup', require('./signup'))
 
 
+
 module.exports = router;
+// module.exports = router is allowing everything that 
+// is router to be exported to be used in other file's 
+// that require it
