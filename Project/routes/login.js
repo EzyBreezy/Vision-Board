@@ -14,7 +14,13 @@ router.get('/', (req, res) => { // express.Router.get('browser path, (Server Req
 //     res.render(`main/login`)
 // })
 
-
+// path is home/login
+router.post('/new', (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
+    // home page
+    Goals.create({
+        
+    })
+})
 
 
 

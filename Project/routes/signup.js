@@ -1,15 +1,13 @@
 const express = require('express'); // requires the express module
 const router = express.Router(); // initializes the express with Router method
+const signupController = require(`../controllers/signup`)
 
 // signup.js
 
 // path is signup page
-router.get('/', (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
-    // signup page
-    res.render(`main/signup`) // path to hbs
-})
+router.get('/', signupController.index)
 
-
+// on signup page they need to create a user model
 
 
 

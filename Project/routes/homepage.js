@@ -1,13 +1,11 @@
 const express = require('express'); // requires the express module
 const router = express.Router(); // initializes the express with Router method
+const homepageController = require(`../controllers/homepage`)
 
 //homepage.js
 
-// path is home/login
-router.get('/', (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
-    // home page
-    res.render(`main/homepage`) // path to hbs
-})
+// path is home page for hbs templete
+router.get('/', homepageController.index)
 
 
 

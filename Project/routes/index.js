@@ -16,6 +16,7 @@ router.use('/login', require('./login'))
 // signup.js routes /signup < is the signup page when user needs to signup
 router.use('/signup', require('./signup'))
 
+// goals.js routes /goals < is the post page when user needs to post
 router.use('/goals', require('./goals'))
 
 
