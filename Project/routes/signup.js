@@ -5,7 +5,9 @@ const signupController = require(`../controllers/signup`)
 // signup.js
 
 // path is signup page
-router.get('/', signupController.index)
+router.get('/', signupController.signUp)
+// path is signup post
+router.post('/', signupController.createSignUp)
 
 // on signup page they need to create a user model
 

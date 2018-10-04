@@ -1,13 +1,16 @@
 const express = require('express'); // requires the express module
 const router = express.Router(); // initializes the express with Router method
+const profileController = require("../controllers/profilepage")
 
 // profilepage.js
 
 // main page route
-router.get('/', (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
-    // profile page
-    res.render(`profile/profilepage`)
-})
+router.get('/', profileController.main ) 
+// main page post
+router.get('/:id', profileController.show) //show
+
+router.post(`/`, profileController.makePost)
+
 
 
 // router.post('/', (req, res) => {
