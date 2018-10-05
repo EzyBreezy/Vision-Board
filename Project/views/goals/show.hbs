@@ -14,6 +14,6 @@
 <form method="GET" action="{{goal.id}}/edit">
     <input type="submit" value="Edit" name="edit">
 </form>
-<form method="DELETE" action="goal/{{id}}">
+<form method="POST" action="/goal/{{goal.id}}?_method=DELETE">
     <input type="submit" value="Delete" name="delete">
 </form>

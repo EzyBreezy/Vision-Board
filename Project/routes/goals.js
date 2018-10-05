@@ -59,9 +59,9 @@ router.put("/goal/:id", (req, res) => {
 
 // destroy
 router.delete("/goal/:id", (req, res) => {
-    Goals.findOneAndDelete({ _id: req.params.id})
+    Goals.findOneAndDelete({_id: req.params.id})
     .then(goal => {
-        res.redirect("/goal", {goal});
+        res.redirect(`/goal`);
     })
 });
 
