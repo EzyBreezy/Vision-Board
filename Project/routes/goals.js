@@ -20,8 +20,8 @@ router.post("/goal", (req, res) => {
     // express.Router.get('browser path, (Server Request, Server Response))
     // home p
     Goals.create({
-        title: req.body.title, // requires body data
-        img: req.body.img
+        title: req.body.title, // request body title
+        img: req.body.img // request img title
     }).then(goal => {
         res.redirect("/goal");
     });
@@ -38,7 +38,10 @@ router.get("/goal/:id", (req, res) => {
 
 //edit route
 router.get("/goal/:id/edit", (req, res) => {
-
+    Goals.findById(req.params.id)
+    .then(goal => {
+        res.render('goals/edit', {goal})
+    })
 })
 
 
@@ -47,9 +50,12 @@ router.put("/goal/:id", (req, res) => {
 
 });
 
-// delete
+// destroy
 router.delete("/goal/:id", (req, res) => {
-    res.redirect("/");
+    Goals.findOneAndDelete({ _id: req.params.id})
+    .then(goal => {
+        res.redirect("/goal");
+    })
 });
 
 module.exports = router;

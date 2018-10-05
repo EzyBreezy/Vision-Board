@@ -3,13 +3,17 @@
     <a href="/goal/">Back</a>
 </div>
 <div>
-    {{goal.title}}
-    <img src="{{goal.img}}" alt="" style="max-width: 80%">
+    <div>
+        {{goal.title}}
+    </div>
+    <div>
+        <img src="{{goal.img}}" alt="" style="max-width: 80%">
+    </div>
 </div>
 
-<form>
-    <input type="submit" value="Edit">
+<form method="GET" action="{{goal.id}}/edit">
+    <input type="submit" value="Edit" name="edit">
 </form>
-<form>
-    <input type="submit" value="Delete">
+<form method="DELETE" action="goal/{{id}}">
+    <input type="submit" value="Delete" name="delete">
 </form>
