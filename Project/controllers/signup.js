@@ -1,16 +1,16 @@
-const User = require("../models/User")
+// const User = require("../models/User")
 
-module.exports = {
+// module.exports = {
     
-    signUp: (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
-    // signup page
-        res.render(`main/signup`) // path to hbs
-    },  
+//     signUp: (req, res) => { // express.Router.get('browser path, (Server Request, Server Response))
+//     // signup page
+//         res.render(`main/signup`) // path to hbs
+//     },  
 
-    // allows user to create a model for profile page
-    createSignUp: (req, res) => {
-        res.redirect('main/login')
-    }
-    //
+//     // allows user to create a model for profile page
+//     createSignUp: (req, res) => {
+//         res.redirect('main/login')
+//     }
+//     //
     
-}
+// }

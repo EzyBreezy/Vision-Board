@@ -8,14 +8,16 @@ const app = express()
 const port = 4000
 
 
-
+app.use(bodyParser.urlencoded({ extended: true}))
 //setup views engine
 app.set(`view engine`, `hbs`)
 // css styleshit linking __dirname is the current directory public is the folder
 app.use(express.static( __dirname + '/public'))
 
 // route to use
-app.use(require(`./routes/index`))
+app.use(require(`./routes/goals`))
+app.use(require(`./routes/homepage`))
+
 
 // listen to the server on port
 app.listen(port, () => console.log(`port started on localhost:${port}, Options are /, profile, login, signup`))

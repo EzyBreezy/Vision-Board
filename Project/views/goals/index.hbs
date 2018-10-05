@@ -1,0 +1,21 @@
+<div class="topbox">
+    <a href="/"> Sign-Out </a>
+</div>
+
+<a href="/goal/new">Create new Goal </a>
+
+{{#each allGoals}}
+<a href="/goal/{{id}}">
+    <div>
+        <div>
+            {{title}}
+        </div>
+        <img src="{{img}}" alt="" style="max-width: 40%">
+    </div>
+</a>
+{{/each}}
+<h1> Welcome to Your Vision Board </h1>
+
+<p> display profile visual boards </p>
+
+<p> goals listed vertically like twitter app </p>
