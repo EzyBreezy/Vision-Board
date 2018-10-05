@@ -47,6 +47,13 @@ router.get("/goal/:id/edit", (req, res) => {
 
 // update post of goals
 router.put("/goal/:id", (req, res) => {
+    Goals.findByIdAndUpdate(req.params.id, {
+        title: req.body.title, 
+        img: req.body.img
+    })
+    .then(goal => {
+        res.redirect(`/goal/${req.params.id}`)
+    })
 
 });
 
@@ -54,7 +61,7 @@ router.put("/goal/:id", (req, res) => {
 router.delete("/goal/:id", (req, res) => {
     Goals.findOneAndDelete({ _id: req.params.id})
     .then(goal => {
-        res.redirect("/goal");
+        res.redirect("/goal", {goal});
     })
 });
 

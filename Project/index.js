@@ -1,6 +1,7 @@
 const express = require(`express`)
 const hbs = require(`hbs`)
 const bodyParser = require(`body-parser`)
+const methodOverride = require('method-override')
 
 // initialize express
 const app = express()
@@ -8,7 +9,7 @@ const app = express()
 const port = 4000
 
 
-
+app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({ extended: true}))
 //setup views engine
 app.set(`view engine`, `hbs`)

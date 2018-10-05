@@ -2,7 +2,7 @@
     {{!-- <a href="/"> Sign-Out </a> --}}
     <a href="/goal/">Back</a>
 </div>
-<form method="POST" action="goal/edit">
+<form method="POST" action="/goal/{{goal.id}}?_method=PUT">
     <input type="text"  placeholder="Title"  value="{{goal.title}}" name="title">
     <input class="url-link"  type="text"  value="{{goal.img}}" placeholder="IMG URL"  name="img">
     <input type="submit">
