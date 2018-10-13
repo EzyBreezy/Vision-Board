@@ -22,7 +22,7 @@ app.use(require(`./routes/homepage`))
 
 
 // listen to the server on port
-app.listen(port, () => console.log(`port started on localhost:${port}, Options are /, profile, login, signup`))
+app.listen(port, () => console.log(`port started on localhost:${port}`))
 
 
 //what is __dirname

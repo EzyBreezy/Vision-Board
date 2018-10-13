@@ -10,7 +10,7 @@ router.get('/', homepageController.index)
 
 
 
-
+// landing page
 
 
 
